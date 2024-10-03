@@ -23,6 +23,7 @@ int main()
 	// Wait for an input or a timeout
 	
 	int activity = select(max_fd + 1, &read_fds, NULL, NULL, &timeout);
+	printf("activity: %d\n", activity);
 
 	if (activity < 0) {
 		perror("select error");
