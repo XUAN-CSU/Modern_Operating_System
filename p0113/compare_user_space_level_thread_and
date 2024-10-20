@@ -1,0 +1,22 @@
+# WLC add at the 20241019
+# compare the thread in the user_space-level and the thread in the kernel-level
+
+**************************************************************************************************************************
+			|	Kernel-Level					|	User_Space-Level
+__________________________________________________________________________________________________________________________
+Managed by		|	Operating System				|	User-Level Libraries	
+__________________________________________________________________________________________________________________________
+Context Switching	|	OS						|	No need the kernel intervention.
+			|	better resource managgement			|	Switching faster
+			|	and multitasking				|
+__________________________________________________________________________________________________________________________
+Advantages		|	Better utiliztion of multiprocessor.		|	Lightweight and efficient, can
+			|	the threads can across the muliple 		|	be destroyed quickly
+			|	CPUs.						|
+__________________________________________________________________________________________________________________________
+Disadvantage		|	Slower context switching			|	The kernel sees a single 
+			|	More complex implementation			|	process and cannot schedule 
+			|	requires kernel support				|	user-level threads on multiple 
+			|							|	CPUs. the process will be blocked
+			|							|	if the thread be blocked.
+**************************************************************************************************************************
